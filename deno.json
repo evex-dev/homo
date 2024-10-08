@@ -1,0 +1,7 @@
+{
+  "name": "@evex/homo",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./homo.ts"
+  }
+}
