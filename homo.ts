@@ -527,7 +527,7 @@ const NumberTable = {
   [-1]: "11-4-5+1-4",
 };
 
-const homo = (() => {
+const homo: (number: number) => DemolishResult = (() => {
   const numsReversed = Object.keys(NumberTable)
     .map((x) => +x)
     .filter((x) => x > 0);
@@ -616,18 +616,18 @@ const homo = (() => {
       .replace(/\d+|-1/g, (n) =>
         n in NumberTable
           ? NumberTable[Number(n) as keyof typeof NumberTable]
-          : "",
+          : ""
       )
       .replace("^", "**");
     while (expr.match(/[\*|\/]\([^\+\-\(\)]+\)/))
       expr = expr.replace(
         /([\*|\/])\(([^\+\-\(\)]+)\)/,
-        (_m, $1, $2) => $1 + $2,
+        (_m, $1, $2) => $1 + $2
       );
     while (expr.match(/[\+|\-]\([^\(\)]+\)[\+|\-|\)]/))
       expr = expr.replace(
         /([\+|\-])\(([^\(\)]+)\)([\+|\-|\)])/,
-        (_m, $1, $2, $3) => $1 + $2 + $3,
+        (_m, $1, $2, $3) => $1 + $2 + $3
       );
     while (expr.match(/[\+|\-]\(([^\(\)]+)\)$/))
       expr = expr.replace(/([\+|\-])\(([^\(\)]+)\)$/, (_m, $1, $2) => $1 + $2);
@@ -652,6 +652,4 @@ const homo = (() => {
   };
 })();
 
-export {
-  homo
-};
+export { homo };

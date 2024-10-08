@@ -13,13 +13,13 @@ console.log(homo(1919))
 ```
 
 ```bash
-npx jsr add @evex/homo
-bunx --bun jsr add @evex/homo
-deno add @evex/homo
+npx jsr add @evex/h0mo
+bunx --bun jsr add @evex/h0mo
+deno add @evex/h0mo
 ```
 
 ```ts
-import { homo } from "@evex/homo";
+import { homo } from "@evex/h0mo";
 
 console.log(homo(1919))
 ```
