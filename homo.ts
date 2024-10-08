@@ -527,6 +527,11 @@ const NumberTable = {
   [-1]: "11-4-5+1-4",
 };
 
+/**
+ * @description homo
+ * @param {number} number
+ * @returns {DemolishResult}
+ */
 const homo: (number: number) => DemolishResult = (() => {
   const numsReversed = Object.keys(NumberTable)
     .map((x) => +x)
