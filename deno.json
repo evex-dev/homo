@@ -2,7 +2,8 @@
   "name": "@evex/h0mo",
   "version": "1.0.1",
   "exports": {
-    ".": "./homo.ts"
+    ".": "./homo.ts",
+    "./810": "./homo.810.ts"
   },
   "publish": {
     "exclude": ["./.github/**"]
