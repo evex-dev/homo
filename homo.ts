@@ -3,7 +3,7 @@ interface DemolishResult {
   result: string;
 }
 
-const NumberTable = {
+export const NumberTable = {
   229028: "(114514+114514)",
   114514: "114514",
   58596: "114*514",
